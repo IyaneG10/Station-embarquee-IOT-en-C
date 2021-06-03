@@ -1,0 +1,28 @@
+
+thead td {
+	background-color: yellow;
+}
+
+table, table * {
+	border-collapse: collapse;
+}
+
+table {
+	width: 80%;
+	text-align: center;
+	margin: 10%;
+}
+
+table * {
+	border: black 1px solid;
+	width: 16.66%;
+}
+
+td > p {
+	border: none;
+	margin: auto;
+}
+
+p::after {
+	content: " mg/m³ ";
+}

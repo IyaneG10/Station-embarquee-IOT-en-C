@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="refresh" content="20">
+		<title>Graphiques</title>
+		<script src="./JS/Chart.bundle.js"></script>
+		<script src="./JS/Graph.js"></script>
+		<link rel="shortcut icon" type="image/png" href="./images/favicon.ico" />
+		<script type="text/javascript">
+			lireFichierTexte1("./data/capteur1.txt")
+            lireFichierTexte2("./data/capteur2.txt")
+            lireFichierTexte3("./data/capteur3.txt")
+            lireFichierTexte4("./data/capteur4.txt")
+            lireFichierTexte5("./data/capteur5.txt")
+            lireFichierTexte6("./data/capteur6.txt")
+		</script>
+	</head>
+
+	<body>
+		<h1> Graphiques </h1>
+		<div style="width: 75%">
+			<canvas id="myChart"></canvas>
+		</div>
+		<script>
+			var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+	// The type of chart we want to create
+	type: 'line',
+
+	// The data for our dataset
+	data: {
+		labels: ['0', '1', '2', '3', '4', '5', '6'],
+		datasets: [{
+			label: 'Capteur 1',
+			//backgroundColor: 'rgb(255, 99, 132)',
+			borderColor: 'rgb(255, 99, 132)',
+			data: [parseFloat(valGraph1[6]), parseFloat(valGraph1[5]), parseFloat(valGraph1[4]), parseFloat(valGraph1[3]), parseFloat(valGraph1[2]), parseFloat(valGraph1[1]), parseFloat(valGraph1[0])]
+		}, {
+			label: 'Capteur 2',
+			//backgroundColor: 'rgb(255, 99, 132)',
+			borderColor: 'rgb(0, 99, 0)',
+			data: [parseFloat(valGraph2[6]), parseFloat(valGraph2[5]), parseFloat(valGraph2[4]), parseFloat(valGraph2[3]), parseFloat(valGraph2[2]), parseFloat(valGraph2[1]), parseFloat(valGraph2[0])]
+		}, {
+			label: 'Capteur 3',
+			//backgroundColor: 'rgb(255, 99, 132)',
+			borderColor: 'rgb(0, 0, 150)',
+			data: [parseFloat(valGraph3[6]), parseFloat(valGraph3[5]), parseFloat(valGraph3[4]), parseFloat(valGraph3[3]), parseFloat(valGraph3[2]), parseFloat(valGraph3[1]), parseFloat(valGraph3[0])]
+		}, {
+			label: 'Capteur 4',
+			//backgroundColor: 'rgb(255, 99, 132)',
+			borderColor: 'rgb(100, 99, 20)',
+			data: [parseFloat(valGraph4[6]), parseFloat(valGraph4[5]), parseFloat(valGraph4[4]), parseFloat(valGraph4[3]), parseFloat(valGraph4[2]), parseFloat(valGraph4[1]), parseFloat(valGraph4[0])]
+		}, {
+			label: 'Capteur 5',
+			//backgroundColor: 'rgb(255, 99, 132)',
+			borderColor: 'rgb(255, 0, 0)',
+			data: [parseFloat(valGraph5[6]), parseFloat(valGraph5[5]), parseFloat(valGraph5[4]), parseFloat(valGraph5[3]), parseFloat(valGraph5[2]), parseFloat(valGraph5[1]), parseFloat(valGraph5[0])]
+		}, {
+			label: 'Capteur 6',
+			//backgroundColor: 'rgb(255, 99, 132)',
+			borderColor: 'rgb(255, 255, 0)',
+			data: [parseFloat(valGraph6[6]), parseFloat(valGraph6[5]), parseFloat(valGraph6[4]), parseFloat(valGraph6[3]), parseFloat(valGraph6[2]), parseFloat(valGraph6[1]), parseFloat(valGraph6[0])]
+		}]
+	},
+
+	// Configuration options go here
+	options: {
+
+	}
+});
+		</script>
+
+	</body>
+
+</html>
+<!-- <script type="text/javascript">
+	lireFichierTexte("./data.txt")
+//console.log(valGraph[0]);
+    var v1 = parseFloat(valGraph[0]);
+    var v2 = parseFloat(valGraph[1]);
+    var v3 = parseFloat(valGraph[2]);
+    var v4 = parseFloat(valGraph[3]);
+    var v5 = parseFloat(valGraph[4]);
+    var v6 = parseFloat(valGraph[5]);
+    console.log(v1);
+    console.log(v2);
+    console.log(v3);
+    console.log(v4);
+    console.log(v5);
+    console.log(v6);
+    document.getElementById("c1").value = v1;
+    document.getElementById("c2").value = v2;
+    document.getElementById("c3").value = v2;
+    document.getElementById("c4").value = v3;
+    document.getElementById("c5").value = v4;
+    document.getElementById("c6").value = v5;
+    console.log(c1);
+    console.log(c2);
+    console.log(c3);
+    console.log(c4);
+
+//console.log(v1);
+
+//document.getElementById("c2").innerHTML = valCap;
+</script> -->

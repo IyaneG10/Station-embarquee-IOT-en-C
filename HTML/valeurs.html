@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="refresh" content="20">
+		<title>Valeurs</title>
+		<script src="./JS/valeurs.js"></script>
+		<link rel="stylesheet" type="text/css" href="./CSS/valeurs.css" />
+		<link rel="shortcut icon" type="image/png" href="./images/favicon.ico" />
+	</head>
+
+	<body>
+
+		<!-- <div id="capt1" style="background-color: yellow; display: inline-block;"><span style="display: block;">capteur 1</span><span id="capt1.val" style="display: block; text-align: center;"></span> </div>
+	  <div id="capt2" style="background-color: yellow; display: inline-block;"><span style="display: block;">capteur 2</span><span id="capt1.val" style="display: block; text-align: center;"></span> </div>
+	  <div id="capt3" style="background-color: yellow; display: inline-block;"><span style="display: block;">capteur 3</span><span id="capt1.val" style="display: block; text-align: center;"></span> </div>
+	  <div id="capt4" style="background-color: yellow; display: inline-block;"><span style="display: block;">capteur 4</span><span id="capt1.val" style="display: block; text-align: center;"></span> </div>
+	  <div id="capt5" style="background-color: yellow; display: inline-block;"><span style="display: block;">capteur 5</span><span id="capt1.val" style="display: block; text-align: center;"></span> </div>
+	  <div id="capt6" style="background-color: yellow; display: inline-block;"><span style="display: block;">capteur 6</span><span id="capt1.val" style="display: block; text-align: center;"></span> </div> -->
+
+	  <table>
+		  <thead>
+			  <tr>
+				  <td>capteur 1</td>
+				  <td>capteur 2</td>
+				  <td>capteur 3</td>
+				  <td>capteur 4</td>
+				  <td>capteur 5</td>
+				  <td>capteur 6</td>
+			  </tr>
+		  </thead>
+		  <tbody>
+			  <tr>
+				  <td>
+					  <p id="c1"></p>
+				  </td>
+				  <td>
+					  <p id="c2"></p>
+				  </td>
+				  <td>
+					  <p id="c3"></p>
+				  </td>
+				  <td>
+					  <p id="c4"></p>
+				  </td>
+				  <td>
+					  <p id="c5"></p>
+				  </td>
+				  <td>
+					  <p id="c6"></p>
+				  </td>
+			  </tr>
+		  </tbody>
+	  </table>
+	</body>
+
+</html>
+
+<script type="text/javascript">
+	lireFichierTexte("./data/capteur1.txt")
+document.getElementById("c1").innerHTML = valCap[0];
+lireFichierTexte("./data/capteur2.txt")
+document.getElementById("c2").innerHTML = valCap[0];
+lireFichierTexte("./data/capteur3.txt")
+document.getElementById("c3").innerHTML = valCap[0];
+lireFichierTexte("./data/capteur4.txt")
+document.getElementById("c4").innerHTML = valCap[0];
+lireFichierTexte("./data/capteur5.txt")
+document.getElementById("c5").innerHTML = valCap[0];
+lireFichierTexte("./data/capteur6.txt")
+document.getElementById("c6").innerHTML = valCap[0];
+//document.getElementById("c2").innerHTML = valCap;
+</script>
+<!-- <script src="./jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$.getJSON("./test.js", function(json) {
+	console.log("JSON Data: " + json.users[3].name);
+    });
+</script> -->
